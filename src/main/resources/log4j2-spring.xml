@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console for everything at root level -->
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%X{traceId}] %c{1.} - %m%throwable{short}%n"/>
+        </Console>
+
+        <!-- Error-only file (rolling) -->
+        <RollingFile name="ERROR_FILE"
+                     fileName="logs/app-error.log"
+                     filePattern="logs/app-error-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%X{traceId}] %c{1.} - %m%throwable%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+            <!-- Only accept ERROR and above -->
+            <Filters>
+                <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <!-- (Optional) main rolling file for all levels -->
+        <RollingFile name="APP_FILE"
+                     fileName="logs/app.log"
+                     filePattern="logs/app-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%X{traceId}] %c{1.} - %m%throwable{short}%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Your packages at DEBUG -->
+        <AsyncLogger name="org.jstats" level="DEBUG"/>
+        <!-- Spring at INFO (reduce noise) -->
+        <AsyncLogger name="org.springframework" level="INFO"/>
+
+        <AsyncRoot level="INFO">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="APP_FILE"/>
+            <AppenderRef ref="ERROR_FILE"/>
+        </AsyncRoot>
+    </Loggers>
+</Configuration>
