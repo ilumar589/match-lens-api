@@ -89,7 +89,11 @@ public class FdOrgClient {
             var status = ex.getStatusCode();
             var bodyBytes = ex.getResponseBodyAsByteArray();
             var preview = bodyBytes == null ? "" : new String(bodyBytes, 0, Math.min(bodyBytes.length, 500), StandardCharsets.UTF_8);
-            log.warn("football-data.org client error {} for competitions {}. Body: {}", status.value(), code, preview);
+
+            if (log.isWarnEnabled()) {
+                log.warn("football-data.org client error {} for competitions {}. Body: {}", status.value(), code, preview);
+            }
+
             if (status.value() == 400) {
                 throw new ResponseStatusException(BAD_REQUEST, problemMsg("Bad request to football-data.org (likely token/parameters)", preview));
             } else if (status.value() == 401) {
@@ -104,7 +108,10 @@ public class FdOrgClient {
             var msg = (cause instanceof com.fasterxml.jackson.core.JsonProcessingException jp)
                     ? jp.getOriginalMessage()
                     : conv.getMessage();
-            log.error("Failed to parse football-data.org JSON for competitions {}: {}", code, msg);
+
+            if (log.isErrorEnabled()) {
+                log.error("Failed to parse football-data.org JSON for competitions {}: {}", code, msg);
+            }
             throw new UpstreamJsonParseException(msg);
         }
     }
@@ -152,21 +159,27 @@ public class FdOrgClient {
     @Recover
     public Optional<MatchPayload.Competition> recoverRateLimit(RateLimitedException ex, String code) {
         // surface as 429 Problem
-        log.warn("Recover after rate limit for competitions {}. Retry-After ~{}s", code, ex.retryAfter.toSeconds());
+        if (log.isWarnEnabled()) {
+            log.warn("Recover after rate limit for competitions {}. Retry-After ~{}s", code, ex.retryAfter.toSeconds());
+        }
         throw new ResponseStatusException(TOO_MANY_REQUESTS,
                 "Rate limit reached at football-data.org; retry after ~" + ex.retryAfter.toSeconds() + "s");
     }
 
     @Recover
     public Optional<MatchPayload.Competition> recoverUpstream(Upstream5xxException ex, String code) {
-        log.error("Recover after upstream 5xx {} for competitions {}", ex.status, code);
+        if (log.isErrorEnabled()) {
+            log.error("Recover after upstream 5xx {} for competitions {}", ex.status, code);
+        }
         throw new ResponseStatusException(BAD_GATEWAY,
                 "Upstream error from football-data.org: HTTP " + ex.status);
     }
 
     @Recover
     public Optional<MatchPayload.Competition> recoverIo(ResourceAccessException ex, String code) {
-        log.error("Recover after IO error while calling football-data.org for competitions {}", code, ex);
+        if (log.isErrorEnabled()) {
+            log.error("Recover after IO error while calling football-data.org for competitions {}", code, ex);
+        }
         throw new ResponseStatusException(GATEWAY_TIMEOUT,
                 "Upstream timeout while calling football-data.org");
     }
