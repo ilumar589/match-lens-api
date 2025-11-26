@@ -33,6 +33,20 @@ public class EmbeddingService {
     }
 
     /**
+     * Converts a float array embedding to a List of Doubles.
+     *
+     * @param embedding the float array embedding
+     * @return the embedding as a List of Doubles
+     */
+    private List<Double> toDoubleList(float[] embedding) {
+        List<Double> result = new java.util.ArrayList<>(embedding.length);
+        for (float f : embedding) {
+            result.add((double) f);
+        }
+        return result;
+    }
+
+    /**
      * Generates and stores an embedding for a match by ID.
      *
      * @param matchId the match ID
@@ -53,12 +67,9 @@ public class EmbeddingService {
         }
 
         try {
-            // Generate embedding
+            // Generate embedding and convert to List<Double>
             float[] embedding = embeddingModel.embed(matchText);
-            List<Double> embeddingList = new java.util.ArrayList<>();
-            for (float f : embedding) {
-                embeddingList.add((double) f);
-            }
+            List<Double> embeddingList = toDoubleList(embedding);
 
             // Store in database
             repository.save(matchId, embeddingList);
@@ -109,11 +120,7 @@ public class EmbeddingService {
      */
     public List<Double> generateQueryEmbedding(String query) {
         float[] embedding = embeddingModel.embed(query);
-        List<Double> embeddingList = new java.util.ArrayList<>();
-        for (float f : embedding) {
-            embeddingList.add((double) f);
-        }
-        return embeddingList;
+        return toDoubleList(embedding);
     }
 
     /**

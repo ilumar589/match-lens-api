@@ -27,6 +27,12 @@ public class MatchPredictionService {
 
     private static final Logger log = LoggerFactory.getLogger(MatchPredictionService.class);
 
+    /** Default confidence score when parsing fails or confidence is not provided */
+    private static final double DEFAULT_CONFIDENCE = 0.5;
+
+    /** Fallback confidence score when LLM prediction fails entirely */
+    private static final double FALLBACK_CONFIDENCE = 0.33;
+
     private final ChatClient chatClient;
     private final VectorStore vectorStore;
     private final MatchContextBuilder contextBuilder;
@@ -140,7 +146,7 @@ public class MatchPredictionService {
             Map<String, Object> parsed = objectMapper.readValue(cleanedResponse, Map.class);
 
             String predictedWinner = (String) parsed.get("predictedWinner");
-            Double confidence = parsed.get("confidence") instanceof Number n ? n.doubleValue() : 0.5;
+            Double confidence = parsed.get("confidence") instanceof Number n ? n.doubleValue() : DEFAULT_CONFIDENCE;
             String reasoning = (String) parsed.get("reasoning");
             @SuppressWarnings("unchecked")
             List<String> keyFactors = parsed.get("keyFactors") instanceof List<?> list
@@ -165,7 +171,7 @@ public class MatchPredictionService {
 
         return new PredictionResponse(
                 predictedWinner,
-                0.5,
+                DEFAULT_CONFIDENCE,
                 response,
                 List.of("Unable to parse structured response"),
                 relevantMatches
@@ -175,7 +181,7 @@ public class MatchPredictionService {
     private PredictionResponse createFallbackResponse(PredictionRequest request, MatchContext context) {
         return new PredictionResponse(
                 "DRAW",
-                0.33,
+                FALLBACK_CONFIDENCE,
                 "Unable to generate prediction due to LLM error. Based on limited historical data.",
                 List.of("Fallback prediction", "Insufficient data"),
                 context.relevantMatches()

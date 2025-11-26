@@ -24,6 +24,20 @@ public class MatchEmbeddingRepository {
     }
 
     /**
+     * Converts a List of Doubles to PostgreSQL vector format string.
+     *
+     * @param embedding the embedding vector as a list of doubles
+     * @return the PostgreSQL vector format string, e.g., "[0.1,0.2,0.3]"
+     */
+    private String toVectorString(List<Double> embedding) {
+        return embedding.stream()
+                .map(Object::toString)
+                .reduce((a, b) -> a + "," + b)
+                .map(s -> "[" + s + "]")
+                .orElse("[]");
+    }
+
+    /**
      * Saves an embedding for a match.
      *
      * @param matchId   the ID of the match
@@ -31,12 +45,7 @@ public class MatchEmbeddingRepository {
      * @return the ID of the saved embedding, or empty if already exists
      */
     public Optional<Long> save(Long matchId, List<Double> embedding) {
-        // Convert List<Double> to PostgreSQL vector format
-        String vectorString = embedding.stream()
-                .map(Object::toString)
-                .reduce((a, b) -> a + "," + b)
-                .map(s -> "[" + s + "]")
-                .orElse("[]");
+        String vectorString = toVectorString(embedding);
 
         String sql = """
                 INSERT INTO match_embedding (match_id, embedding)
@@ -66,11 +75,7 @@ public class MatchEmbeddingRepository {
      * @return list of match IDs ordered by similarity
      */
     public List<Long> findSimilarMatches(List<Double> queryEmbedding, int limit) {
-        String vectorString = queryEmbedding.stream()
-                .map(Object::toString)
-                .reduce((a, b) -> a + "," + b)
-                .map(s -> "[" + s + "]")
-                .orElse("[]");
+        String vectorString = toVectorString(queryEmbedding);
 
         String sql = """
                 SELECT match_id
