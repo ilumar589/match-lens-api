@@ -29,6 +29,7 @@ repositories {
 }
 
 extra["springGrpcVersion"] = "0.11.0"
+extra["springAiVersion"] = "1.0.0"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
@@ -66,6 +67,9 @@ dependencies {
 	implementation("org.springframework.grpc:spring-grpc-server-web-spring-boot-starter")
 	implementation("org.springframework.kafka:spring-kafka")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    // Spring AI dependencies
+    implementation("org.springframework.ai:spring-ai-starter-model-ollama")
+    implementation("org.springframework.ai:spring-ai-starter-vector-store-pgvector")
     compileOnly("org.projectlombok:lombok")
     compileOnly("org.jspecify:jspecify:1.0.0")
     implementation("org.apiguardian:apiguardian-api:1.1.2")
@@ -80,12 +84,14 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:kafka")
 	testImplementation("org.testcontainers:postgresql")
+	testImplementation("org.testcontainers:ollama")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 dependencyManagement {
 	imports {
 		mavenBom("org.springframework.grpc:spring-grpc-dependencies:${property("springGrpcVersion")}")
+		mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
 	}
 }
 
