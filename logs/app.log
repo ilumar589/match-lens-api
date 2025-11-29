@@ -1,0 +1,329 @@
+2025-11-29T21:23:08,147 INFO  [] o.h.v.i.u.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-29T21:23:08,197 INFO  [] o.j.m.MatchlensApiApplication - Starting MatchlensApiApplication using Java 25.0.1 with PID 3675 (/home/runner/work/match-lens-api/match-lens-api/build/classes/java/main started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:23:08,199 DEBUG [] o.j.m.MatchlensApiApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:23:08,199 INFO  [] o.j.m.MatchlensApiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:23:09,439 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-11-29T21:23:09,463 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2025-11-29T21:23:29,349 INFO  [] o.h.v.i.u.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-29T21:23:29,435 INFO  [] o.j.m.MatchlensApiApplicationTests - Starting MatchlensApiApplicationTests using Java 25.0.1 with PID 3725 (/home/runner/work/match-lens-api/match-lens-api/build/classes/java/test started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:23:29,436 DEBUG [] o.j.m.MatchlensApiApplicationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:23:29,437 INFO  [] o.j.m.MatchlensApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:23:30,555 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-11-29T21:23:30,576 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2025-11-29T21:23:33,158 INFO  [] o.j.m.m.a.AiPredictionModuleTests - Starting AiPredictionModuleTests using Java 25.0.1 with PID 3725 (/home/runner/work/match-lens-api/match-lens-api/build/classes/java/test started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:23:33,158 DEBUG [] o.j.m.m.a.AiPredictionModuleTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:23:33,158 INFO  [] o.j.m.m.a.AiPredictionModuleTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:23:33,433 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Starting FdRawIngestRepositoryIntegrationTests using Java 25.0.1 with PID 3725 (/home/runner/work/match-lens-api/match-lens-api/build/classes/java/test started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:23:33,433 DEBUG [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:23:33,433 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:23:38,948 INFO  [] o.h.v.i.u.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-29T21:23:38,996 INFO  [] o.j.m.MatchlensApiApplicationTests - Starting MatchlensApiApplicationTests using Java 25.0.1 with PID 3769 (started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:23:38,997 DEBUG [] o.j.m.MatchlensApiApplicationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:23:38,998 INFO  [] o.j.m.MatchlensApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:23:40,099 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-11-29T21:23:40,122 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
+2025-11-29T21:23:40,704 INFO  [] o.t.i.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-29T21:23:40,706 INFO  [] o.t.u.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-29T21:23:40,711 INFO  [] o.t.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-29T21:23:41,142 INFO  [] o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-29T21:23:41,156 INFO  [] o.t.DockerClientFactory - Docker host IP address is localhost
+2025-11-29T21:23:41,180 INFO  [] o.t.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Ubuntu 24.04.3 LTS
+  Total Memory: 15995 MB
+2025-11-29T21:23:41,208 INFO  [] t.t.1.0 - Pulling docker image: testcontainers/ryuk:0.12.0. Please be patient; this may take some time but only needs to be done once.
+2025-11-29T21:23:41,617 INFO  [] t.t.1.0 - Starting to pull image
+2025-11-29T21:23:41,639 INFO  [] t.t.1.0 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-29T21:23:41,922 INFO  [] t.t.1.0 - Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (116 KB/? MB)
+2025-11-29T21:23:41,940 INFO  [] t.t.1.0 - Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-29T21:23:42,009 INFO  [] t.t.1.0 - Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (10 MB/11 MB)
+2025-11-29T21:23:42,061 INFO  [] t.t.1.0 - Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (10 MB/11 MB)
+2025-11-29T21:23:42,217 INFO  [] t.t.1.0 - Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (11 MB/11 MB)
+2025-11-29T21:23:42,253 INFO  [] t.t.1.0 - Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (11 MB/11 MB)
+2025-11-29T21:23:42,259 INFO  [] t.t.1.0 - Image testcontainers/ryuk:0.12.0 pull took PT1.051138118S
+2025-11-29T21:23:42,285 INFO  [] t.t.1.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-29T21:23:42,350 INFO  [] t.t.1.0 - Container testcontainers/ryuk:0.12.0 is starting: 2e9e071bd5affdb2fec03149de801450c56f4c8b95878ff605795c6b77e29822
+2025-11-29T21:23:42,805 INFO  [] t.t.1.0 - Container testcontainers/ryuk:0.12.0 started in PT0.520159608S
+2025-11-29T21:23:42,810 INFO  [] o.t.u.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-29T21:23:42,810 INFO  [] o.t.DockerClientFactory - Checking the system...
+2025-11-29T21:23:42,810 INFO  [] o.t.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-29T21:23:42,869 INFO  [] t.apache/kafka-native:latest - Pulling docker image: apache/kafka-native:latest. Please be patient; this may take some time but only needs to be done once.
+2025-11-29T21:23:43,221 INFO  [] t.apache/kafka-native:latest - Starting to pull image
+2025-11-29T21:23:43,222 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-29T21:23:43,459 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  7 pending,  1 downloaded,  0 extracted, (2 KB/? MB)
+2025-11-29T21:23:43,594 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  6 pending,  2 downloaded,  0 extracted, (2 MB/? MB)
+2025-11-29T21:23:43,597 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  5 pending,  3 downloaded,  0 extracted, (2 MB/? MB)
+2025-11-29T21:23:43,721 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  4 pending,  4 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-29T21:23:43,749 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  4 pending,  4 downloaded,  1 extracted, (8 MB/? MB)
+2025-11-29T21:23:43,776 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  3 pending,  5 downloaded,  1 extracted, (8 MB/? MB)
+2025-11-29T21:23:43,847 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  2 pending,  6 downloaded,  1 extracted, (17 MB/? MB)
+2025-11-29T21:23:43,909 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  2 pending,  6 downloaded,  2 extracted, (20 MB/? MB)
+2025-11-29T21:23:43,921 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  2 pending,  6 downloaded,  3 extracted, (20 MB/? MB)
+2025-11-29T21:23:44,068 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  1 pending,  7 downloaded,  3 extracted, (43 MB/? MB)
+2025-11-29T21:23:44,079 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  8 downloaded,  3 extracted, (43 MB/47 MB)
+2025-11-29T21:23:44,629 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  8 downloaded,  4 extracted, (47 MB/47 MB)
+2025-11-29T21:23:44,643 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  8 downloaded,  5 extracted, (47 MB/47 MB)
+2025-11-29T21:23:44,653 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  8 downloaded,  6 extracted, (47 MB/47 MB)
+2025-11-29T21:23:44,663 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  8 downloaded,  7 extracted, (47 MB/47 MB)
+2025-11-29T21:23:44,672 INFO  [] t.apache/kafka-native:latest - Pulling image layers:  0 pending,  8 downloaded,  8 extracted, (47 MB/47 MB)
+2025-11-29T21:23:44,678 INFO  [] t.apache/kafka-native:latest - Pull complete. 8 layers, pulled in 1s (downloaded 47 MB at 47 MB/s)
+2025-11-29T21:23:44,678 INFO  [] t.apache/kafka-native:latest - Image apache/kafka-native:latest pull took PT1.808706831S
+2025-11-29T21:23:44,681 INFO  [] t.apache/kafka-native:latest - Creating container for image: apache/kafka-native:latest
+2025-11-29T21:23:44,696 INFO  [] t.apache/kafka-native:latest - Container apache/kafka-native:latest is starting: 901dd383ef9e4e2856ccba04cec70c882b1570a35db8fdb1787ce4ea7574fe17
+2025-11-29T21:23:45,162 INFO  [] t.apache/kafka-native:latest - Container apache/kafka-native:latest started in PT0.480860894S
+2025-11-29T21:23:45,164 INFO  [] t.pgvector/pgvector:pg16 - Pulling docker image: pgvector/pgvector:pg16. Please be patient; this may take some time but only needs to be done once.
+2025-11-29T21:23:45,540 INFO  [] t.pgvector/pgvector:pg16 - Starting to pull image
+2025-11-29T21:23:45,541 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-29T21:23:45,829 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers: 15 pending,  1 downloaded,  0 extracted, (327 KB/? MB)
+2025-11-29T21:23:45,965 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers: 14 pending,  2 downloaded,  0 extracted, (8 MB/? MB)
+2025-11-29T21:23:46,051 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers: 13 pending,  3 downloaded,  0 extracted, (16 MB/? MB)
+2025-11-29T21:23:46,261 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers: 12 pending,  4 downloaded,  0 extracted, (25 MB/? MB)
+2025-11-29T21:23:46,303 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers: 11 pending,  5 downloaded,  0 extracted, (29 MB/? MB)
+2025-11-29T21:23:46,429 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers: 10 pending,  6 downloaded,  0 extracted, (31 MB/? MB)
+2025-11-29T21:23:46,478 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  9 pending,  7 downloaded,  0 extracted, (33 MB/? MB)
+2025-11-29T21:23:46,571 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  8 pending,  8 downloaded,  0 extracted, (36 MB/? MB)
+2025-11-29T21:23:46,606 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  7 pending,  9 downloaded,  0 extracted, (36 MB/? MB)
+2025-11-29T21:23:46,682 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  6 pending, 10 downloaded,  0 extracted, (36 MB/? MB)
+2025-11-29T21:23:46,751 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  5 pending, 11 downloaded,  0 extracted, (42 MB/? MB)
+2025-11-29T21:23:46,796 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  4 pending, 12 downloaded,  0 extracted, (42 MB/? MB)
+2025-11-29T21:23:46,889 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  3 pending, 13 downloaded,  0 extracted, (44 MB/? MB)
+2025-11-29T21:23:47,454 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  3 pending, 13 downloaded,  1 extracted, (86 MB/? MB)
+2025-11-29T21:23:47,578 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  3 pending, 13 downloaded,  2 extracted, (94 MB/? MB)
+2025-11-29T21:23:47,718 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  3 pending, 13 downloaded,  3 extracted, (97 MB/? MB)
+2025-11-29T21:23:47,757 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  3 pending, 13 downloaded,  4 extracted, (99 MB/? MB)
+2025-11-29T21:23:47,934 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  2 pending, 14 downloaded,  4 extracted, (109 MB/? MB)
+2025-11-29T21:23:48,076 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  2 pending, 14 downloaded,  5 extracted, (113 MB/? MB)
+2025-11-29T21:23:48,154 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  2 pending, 14 downloaded,  6 extracted, (118 MB/? MB)
+2025-11-29T21:23:48,162 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  2 pending, 14 downloaded,  7 extracted, (118 MB/? MB)
+2025-11-29T21:23:48,172 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  2 pending, 14 downloaded,  8 extracted, (118 MB/? MB)
+2025-11-29T21:23:50,121 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded,  8 extracted, (163 MB/? MB)
+2025-11-29T21:23:53,035 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded,  9 extracted, (172 MB/? MB)
+2025-11-29T21:23:53,049 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 10 extracted, (172 MB/? MB)
+2025-11-29T21:23:53,062 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 11 extracted, (172 MB/? MB)
+2025-11-29T21:23:53,071 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 12 extracted, (172 MB/? MB)
+2025-11-29T21:23:53,081 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 13 extracted, (172 MB/? MB)
+2025-11-29T21:23:53,094 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 14 extracted, (172 MB/? MB)
+2025-11-29T21:23:53,149 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 15 extracted, (172 MB/? MB)
+2025-11-29T21:23:54,182 INFO  [] t.pgvector/pgvector:pg16 - Pulling image layers:  1 pending, 15 downloaded, 16 extracted, (176 MB/? MB)
+2025-11-29T21:23:54,189 INFO  [] t.pgvector/pgvector:pg16 - Pull complete. 16 layers, pulled in 8s (downloaded 176 MB at 22 MB/s)
+2025-11-29T21:23:54,189 INFO  [] t.pgvector/pgvector:pg16 - Image pgvector/pgvector:pg16 pull took PT9.024340805S
+2025-11-29T21:23:54,192 INFO  [] t.pgvector/pgvector:pg16 - Creating container for image: pgvector/pgvector:pg16
+2025-11-29T21:23:54,215 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 is starting: 5aa3f85ce7978ef51a6149636aa3ed0b72afbf5a898908428f3417ec1f4a8414
+2025-11-29T21:23:55,311 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 started in PT1.118841795S
+2025-11-29T21:23:55,311 INFO  [] t.pgvector/pgvector:pg16 - Container is started (JDBC URL: jdbc:postgresql://localhost:32770/test?loggerLevel=OFF)
+2025-11-29T21:23:55,313 INFO  [] t.ollama/ollama:latest - Pulling docker image: ollama/ollama:latest. Please be patient; this may take some time but only needs to be done once.
+2025-11-29T21:23:55,663 INFO  [] t.ollama/ollama:latest - Starting to pull image
+2025-11-29T21:23:55,663 INFO  [] t.ollama/ollama:latest - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-29T21:23:56,039 INFO  [] t.ollama/ollama:latest - Pulling image layers:  3 pending,  1 downloaded,  0 extracted, (21 MB/? MB)
+2025-11-29T21:23:56,650 INFO  [] t.ollama/ollama:latest - Pulling image layers:  2 pending,  2 downloaded,  0 extracted, (96 MB/? MB)
+2025-11-29T21:23:57,300 INFO  [] t.ollama/ollama:latest - Pulling image layers:  1 pending,  3 downloaded,  0 extracted, (158 MB/? MB)
+2025-11-29T21:23:57,694 INFO  [] t.ollama/ollama:latest - Pulling image layers:  1 pending,  3 downloaded,  1 extracted, (171 MB/? MB)
+2025-11-29T21:23:59,113 INFO  [] t.ollama/ollama:latest - Pulling image layers:  1 pending,  3 downloaded,  2 extracted, (256 MB/? MB)
+2025-11-29T21:24:00,340 INFO  [] t.ollama/ollama:latest - Pulling image layers:  1 pending,  3 downloaded,  3 extracted, (300 MB/? MB)
+2025-11-29T21:24:33,553 INFO  [] t.ollama/ollama:latest - Pulling image layers:  0 pending,  4 downloaded,  3 extracted, (1 GB/1 GB)
+2025-11-29T21:24:50,377 INFO  [] t.ollama/ollama:latest - Pulling image layers:  0 pending,  4 downloaded,  4 extracted, (1 GB/1 GB)
+2025-11-29T21:24:50,383 INFO  [] t.ollama/ollama:latest - Pull complete. 4 layers, pulled in 54s (downloaded 1 GB at 36 MB/s)
+2025-11-29T21:24:50,383 INFO  [] t.ollama/ollama:latest - Image ollama/ollama:latest pull took PT55.06928399S
+2025-11-29T21:24:50,385 INFO  [] t.ollama/ollama:latest - Creating container for image: ollama/ollama:latest
+2025-11-29T21:24:50,400 INFO  [] t.ollama/ollama:latest - Container ollama/ollama:latest is starting: 0215153471d9a53c974fa79c38a0d9652ace26da4a10625dbb3241fccff703fa
+2025-11-29T21:24:50,645 INFO  [] t.ollama/ollama:latest - Container ollama/ollama:latest started in PT0.25953378S
+2025-11-29T21:24:51,761 INFO  [] o.f.c.FlywayExecutor - Database: jdbc:postgresql://localhost:32770/test?loggerLevel=OFF (PostgreSQL 16.11)
+2025-11-29T21:24:51,796 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-11-29T21:24:51,799 INFO  [] o.f.c.i.c.DbValidate - Successfully validated 3 migrations (execution time 00:00.017s)
+2025-11-29T21:24:51,813 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-11-29T21:24:51,895 INFO  [] o.f.c.i.c.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-11-29T21:24:51,912 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "1 - raw ingest"
+2025-11-29T21:24:51,950 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "2 - core entities"
+2025-11-29T21:24:51,978 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "3 - add vector support"
+2025-11-29T21:24:52,021 INFO  [] o.f.c.i.c.DbMigrate - Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.069s)
+2025-11-29T21:24:52,461 INFO  [] o.s.a.v.p.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2025-11-29T21:24:52,466 INFO  [] o.s.a.v.p.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2025-11-29T21:24:52,467 INFO  [] o.s.a.v.p.PgVectorStore - vectorTableValidationsEnabled false
+2025-11-29T21:24:52,528 WARN  [] o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fdOrgClient' defined in file [/home/runner/work/match-lens-api/match-lens-api/build/classes/java/main/org/jstats/matchlens_api/modules/football_data_org_gatherer/ingest/FdOrgClient.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'footballdataorg' defined in class path resource [org/jstats/matchlens_api/modules/football_data_org_gatherer/config/FootballDataSourceConfig.class]: Failed to instantiate [org.springframework.web.client.RestClient]: Factory method 'footballDataSourceRestClient' threw exception with message: Football-Data.org API key missing. Provide via: 1) application property footballdata.api.key, 2) JVM system property -DFOOTBALL_DATA_API_KEY=..., or 3) environment variable FOOTBALL_DATA_API_KEY. Note: if using Gradle, the daemon may cache old env vars; try '--no-daemon' or pass -DFOOTBALL_DATA_API_KEY explicitly.
+2025-11-29T21:24:53,086 INFO  [] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-29T21:24:53,105 ERROR [] o.s.b.SpringApplication - Application run failed org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fdOrgClient' defined in file [/home/runner/work/match-lens-api/match-lens-api/build/classes/java/main/org/jstats/matchlens_api/modules/football_data_org_gatherer/ingest/FdOrgClient.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'footballdataorg' defined in class path resource [org/jstats/matchlens_api/modules/football_data_org_gatherer/config/FootballDataSourceConfig.class]: Failed to instantiate [org.springframework.web.client.RestClient]: Factory method 'footballDataSourceRestClient' threw exception with message: Football-Data.org API key missing. Provide via: 1) application property footballdata.api.key, 2) JVM system property -DFOOTBALL_DATA_API_KEY=..., or 3) environment variable FOOTBALL_DATA_API_KEY. Note: if using Gradle, the daemon may cache old env vars; try '--no-daemon' or pass -DFOOTBALL_DATA_API_KEY explicitly.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+2025-11-29T21:24:53,109 WARN  [] o.s.t.c.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [org.jstats.matchlens_api.MatchlensApiApplicationTests@3f6a69a6] java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@46c6f09c testClass = org.jstats.matchlens_api.MatchlensApiApplicationTests, locations = [], classes = [org.jstats.matchlens_api.MatchlensApiApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.testcontainers.service.connection.ServiceConnectionContextCustomizer@0, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@1d035be3, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6ea94d6a, [ImportsContextCustomizer@14d61031 key = [org.jstats.matchlens_api.TestcontainersConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@61f2c3f0, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@78c7f9b3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5b6e8f77, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@27e32fe4, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@5a9800f8, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@1c95a4f4], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+2025-11-29T21:24:53,290 INFO  [] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.jstats.matchlens_api.MatchlensApiApplication for test class org.jstats.matchlens_api.modules.ai_prediction.AiPredictionModuleTests
+2025-11-29T21:24:53,418 INFO  [] o.j.m.m.a.AiPredictionModuleTests - Starting AiPredictionModuleTests using Java 25.0.1 with PID 3769 (started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:24:53,418 DEBUG [] o.j.m.m.a.AiPredictionModuleTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:24:53,418 INFO  [] o.j.m.m.a.AiPredictionModuleTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:24:53,519 INFO  [] t.pgvector/pgvector:pg16 - Creating container for image: pgvector/pgvector:pg16
+2025-11-29T21:24:53,545 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 is starting: 8b3b96c2fdcdd751f08ef85a6581ba89c7ce661917f2826ce6c9f411b7a7e290
+2025-11-29T21:24:54,717 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 started in PT1.197689803S
+2025-11-29T21:24:54,717 INFO  [] t.pgvector/pgvector:pg16 - Container is started (JDBC URL: jdbc:postgresql://localhost:32772/test?loggerLevel=OFF)
+2025-11-29T21:24:54,787 INFO  [] o.f.c.FlywayExecutor - Database: jdbc:postgresql://localhost:32772/test?loggerLevel=OFF (PostgreSQL 16.11)
+2025-11-29T21:24:54,799 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-11-29T21:24:54,799 INFO  [] o.f.c.i.c.DbValidate - Successfully validated 3 migrations (execution time 00:00.004s)
+2025-11-29T21:24:54,810 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-11-29T21:24:54,839 INFO  [] o.f.c.i.c.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-11-29T21:24:54,850 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "1 - raw ingest"
+2025-11-29T21:24:54,876 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "2 - core entities"
+2025-11-29T21:24:54,903 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "3 - add vector support"
+2025-11-29T21:24:54,942 INFO  [] o.f.c.i.c.DbMigrate - Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.061s)
+2025-11-29T21:24:54,994 INFO  [] o.j.m.m.a.AiPredictionModuleTests - Started AiPredictionModuleTests in 1.688 seconds (process running for 77.778)
+2025-11-29T21:24:55,011 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-11-29T21:24:55,062 INFO  [] c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ac1b00d
+2025-11-29T21:24:55,064 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-29T21:24:56,222 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:24:57,226 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:24:59,228 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:24:59,229 ERROR [] o.j.m.m.f.i.FdOrgClient - Recover after upstream 5xx 503 for competitions PL
+2025-11-29T21:24:59,236 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:24:59,237 WARN  [] o.j.m.m.f.i.FdOrgClient - football-data.org client error 400 for competitions PL. Body: {"message":"Your API token is invalid.","errorCode":400}
+2025-11-29T21:24:59,240 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:00,241 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:02,242 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:02,243 ERROR [] o.j.m.m.f.i.FdOrgClient - Recover after IO error while calling football-data.org for competitions PL org.springframework.web.client.ResourceAccessException: I/O error
+	at org.jstats.matchlens_api.modules.football_data_org_gatherer.ingest.FdOrgClient.getCompetitionInfo(FdOrgClient.java:77)
+2025-11-29T21:25:02,248 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:03,249 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:05,250 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:05,251 WARN  [] o.j.m.m.f.i.FdOrgClient - Recover after rate limit for competitions PL. Retry-After ~5s
+2025-11-29T21:25:05,293 INFO  [] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.jstats.matchlens_api.MatchlensApiApplication for test class org.jstats.matchlens_api.modules.football_data_org_gatherer.ingest.FdRawIngestRepositoryIntegrationTests
+2025-11-29T21:25:05,327 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Starting FdRawIngestRepositoryIntegrationTests using Java 25.0.1 with PID 3769 (started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:25:05,327 DEBUG [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:25:05,328 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:25:05,455 INFO  [] t.pgvector/pgvector:pg16 - Creating container for image: pgvector/pgvector:pg16
+2025-11-29T21:25:05,500 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 is starting: 4331bf261bde7ce458df59411b96f2b50ec447856f0fd2a38e8e4db812aa0acd
+2025-11-29T21:25:06,583 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 started in PT1.128114527S
+2025-11-29T21:25:06,584 INFO  [] t.pgvector/pgvector:pg16 - Container is started (JDBC URL: jdbc:postgresql://localhost:32773/test?loggerLevel=OFF)
+2025-11-29T21:25:06,652 INFO  [] o.f.c.FlywayExecutor - Database: jdbc:postgresql://localhost:32773/test?loggerLevel=OFF (PostgreSQL 16.11)
+2025-11-29T21:25:06,662 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-11-29T21:25:06,662 INFO  [] o.f.c.i.c.DbValidate - Successfully validated 3 migrations (execution time 00:00.003s)
+2025-11-29T21:25:06,671 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-11-29T21:25:06,690 INFO  [] o.f.c.i.c.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-11-29T21:25:06,694 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "1 - raw ingest"
+2025-11-29T21:25:06,710 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "2 - core entities"
+2025-11-29T21:25:06,732 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "3 - add vector support"
+2025-11-29T21:25:06,757 INFO  [] o.f.c.i.c.DbMigrate - Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.038s)
+2025-11-29T21:25:06,776 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Started FdRawIngestRepositoryIntegrationTests in 1.479 seconds (process running for 89.56)
+2025-11-29T21:25:06,780 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Starting...
+2025-11-29T21:25:06,789 INFO  [] c.z.h.p.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5ed218fd
+2025-11-29T21:25:06,790 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-29T21:25:07,335 ERROR [] o.j.m.m.f.i.FdRawIngestService - Failed to serialize competition PL to JSON: boom
+2025-11-29T21:25:07,335 ERROR [] o.j.m.m.f.i.FdRawIngestService - Failed to fetch competition PL from football-data.org: boom
+2025-11-29T21:25:07,370 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-29T21:25:07,376 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-29T21:25:07,586 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-29T21:25:07,587 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-29T21:25:20,851 INFO  [] o.h.v.i.u.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-29T21:25:20,906 INFO  [] o.j.m.MatchlensApiApplicationTests - Starting MatchlensApiApplicationTests using Java 25.0.1 with PID 5477 (started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:25:20,907 DEBUG [] o.j.m.MatchlensApiApplicationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:25:20,907 INFO  [] o.j.m.MatchlensApiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:25:22,058 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-11-29T21:25:22,094 INFO  [] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces.
+2025-11-29T21:25:22,677 INFO  [] o.t.i.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-29T21:25:22,679 INFO  [] o.t.u.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-29T21:25:22,685 INFO  [] o.t.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-29T21:25:22,862 INFO  [] o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-29T21:25:23,054 INFO  [] o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-29T21:25:23,056 INFO  [] o.t.DockerClientFactory - Docker host IP address is localhost
+2025-11-29T21:25:23,079 INFO  [] o.t.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Ubuntu 24.04.3 LTS
+  Total Memory: 15995 MB
+2025-11-29T21:25:23,102 INFO  [] t.t.1.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-29T21:25:23,199 INFO  [] t.t.1.0 - Container testcontainers/ryuk:0.12.0 is starting: e57ce87ff05e4a6e08e02c99ff52c073e9664965e4751cd6aff2d1fe8e55162f
+2025-11-29T21:25:23,470 INFO  [] t.t.1.0 - Container testcontainers/ryuk:0.12.0 started in PT0.367874578S
+2025-11-29T21:25:23,475 INFO  [] o.t.u.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-29T21:25:23,475 INFO  [] o.t.DockerClientFactory - Checking the system...
+2025-11-29T21:25:23,475 INFO  [] o.t.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-29T21:25:23,537 INFO  [] t.apache/kafka-native:latest - Creating container for image: apache/kafka-native:latest
+2025-11-29T21:25:23,556 INFO  [] t.apache/kafka-native:latest - Container apache/kafka-native:latest is starting: ab8697e4861c6708eb18a9583ab56b812263439334ab974816cb2c44780809ea
+2025-11-29T21:25:24,093 INFO  [] t.apache/kafka-native:latest - Container apache/kafka-native:latest started in PT0.556029068S
+2025-11-29T21:25:24,094 INFO  [] t.pgvector/pgvector:pg16 - Creating container for image: pgvector/pgvector:pg16
+2025-11-29T21:25:24,110 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 is starting: 18c0f52a041c58d6c3e23ef183ca83a701e02a4eb72654b42deef489fc2ed957
+2025-11-29T21:25:25,199 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 started in PT1.105044412S
+2025-11-29T21:25:25,200 INFO  [] t.pgvector/pgvector:pg16 - Container is started (JDBC URL: jdbc:postgresql://localhost:32776/test?loggerLevel=OFF)
+2025-11-29T21:25:25,201 INFO  [] t.ollama/ollama:latest - Creating container for image: ollama/ollama:latest
+2025-11-29T21:25:25,225 INFO  [] t.ollama/ollama:latest - Container ollama/ollama:latest is starting: 30d1a7e2dca5e8e6d97a51a17348f4509c25ff3fca80937bdd694973a83ed4f8
+2025-11-29T21:25:25,457 INFO  [] t.ollama/ollama:latest - Container ollama/ollama:latest started in PT0.256096415S
+2025-11-29T21:25:26,102 INFO  [] o.f.c.FlywayExecutor - Database: jdbc:postgresql://localhost:32776/test?loggerLevel=OFF (PostgreSQL 16.11)
+2025-11-29T21:25:26,131 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-11-29T21:25:26,133 INFO  [] o.f.c.i.c.DbValidate - Successfully validated 3 migrations (execution time 00:00.013s)
+2025-11-29T21:25:26,144 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-11-29T21:25:26,205 INFO  [] o.f.c.i.c.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-11-29T21:25:26,216 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "1 - raw ingest"
+2025-11-29T21:25:26,246 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "2 - core entities"
+2025-11-29T21:25:26,267 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "3 - add vector support"
+2025-11-29T21:25:26,306 INFO  [] o.f.c.i.c.DbMigrate - Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.056s)
+2025-11-29T21:25:26,589 INFO  [] o.s.a.v.p.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2025-11-29T21:25:26,594 INFO  [] o.s.a.v.p.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2025-11-29T21:25:26,594 INFO  [] o.s.a.v.p.PgVectorStore - vectorTableValidationsEnabled false
+2025-11-29T21:25:26,672 WARN  [] o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fdOrgClient' defined in file [/home/runner/work/match-lens-api/match-lens-api/build/classes/java/main/org/jstats/matchlens_api/modules/football_data_org_gatherer/ingest/FdOrgClient.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'footballdataorg' defined in class path resource [org/jstats/matchlens_api/modules/football_data_org_gatherer/config/FootballDataSourceConfig.class]: Failed to instantiate [org.springframework.web.client.RestClient]: Factory method 'footballDataSourceRestClient' threw exception with message: Football-Data.org API key missing. Provide via: 1) application property footballdata.api.key, 2) JVM system property -DFOOTBALL_DATA_API_KEY=..., or 3) environment variable FOOTBALL_DATA_API_KEY. Note: if using Gradle, the daemon may cache old env vars; try '--no-daemon' or pass -DFOOTBALL_DATA_API_KEY explicitly.
+2025-11-29T21:25:27,289 INFO  [] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-29T21:25:27,310 ERROR [] o.s.b.SpringApplication - Application run failed org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fdOrgClient' defined in file [/home/runner/work/match-lens-api/match-lens-api/build/classes/java/main/org/jstats/matchlens_api/modules/football_data_org_gatherer/ingest/FdOrgClient.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'footballdataorg' defined in class path resource [org/jstats/matchlens_api/modules/football_data_org_gatherer/config/FootballDataSourceConfig.class]: Failed to instantiate [org.springframework.web.client.RestClient]: Factory method 'footballDataSourceRestClient' threw exception with message: Football-Data.org API key missing. Provide via: 1) application property footballdata.api.key, 2) JVM system property -DFOOTBALL_DATA_API_KEY=..., or 3) environment variable FOOTBALL_DATA_API_KEY. Note: if using Gradle, the daemon may cache old env vars; try '--no-daemon' or pass -DFOOTBALL_DATA_API_KEY explicitly.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+2025-11-29T21:25:27,315 WARN  [] o.s.t.c.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [org.jstats.matchlens_api.MatchlensApiApplicationTests@24f71a3d] java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@7903c638 testClass = org.jstats.matchlens_api.MatchlensApiApplicationTests, locations = [], classes = [org.jstats.matchlens_api.MatchlensApiApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.testcontainers.service.connection.ServiceConnectionContextCustomizer@0, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@790132f7, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@58faa93b, [ImportsContextCustomizer@39c16725 key = [org.jstats.matchlens_api.TestcontainersConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5300f14a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7bc9e6ab, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3c5a54b7, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@6f8d7714, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@757194dc, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@ca91e28], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+2025-11-29T21:25:27,417 INFO  [] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.jstats.matchlens_api.MatchlensApiApplication for test class org.jstats.matchlens_api.modules.ai_prediction.AiPredictionModuleTests
+2025-11-29T21:25:27,492 INFO  [] o.j.m.m.a.AiPredictionModuleTests - Starting AiPredictionModuleTests using Java 25.0.1 with PID 5477 (started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:25:27,493 DEBUG [] o.j.m.m.a.AiPredictionModuleTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:25:27,493 INFO  [] o.j.m.m.a.AiPredictionModuleTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:25:27,634 INFO  [] t.pgvector/pgvector:pg16 - Creating container for image: pgvector/pgvector:pg16
+2025-11-29T21:25:27,664 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 is starting: ffb6ef49f0ac2e37b1aa976cc42a898a47340825f0b3045f7377798c127d8aa9
+2025-11-29T21:25:28,772 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 started in PT1.13860496S
+2025-11-29T21:25:28,772 INFO  [] t.pgvector/pgvector:pg16 - Container is started (JDBC URL: jdbc:postgresql://localhost:32778/test?loggerLevel=OFF)
+2025-11-29T21:25:28,887 INFO  [] o.f.c.FlywayExecutor - Database: jdbc:postgresql://localhost:32778/test?loggerLevel=OFF (PostgreSQL 16.11)
+2025-11-29T21:25:28,900 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-11-29T21:25:28,901 INFO  [] o.f.c.i.c.DbValidate - Successfully validated 3 migrations (execution time 00:00.004s)
+2025-11-29T21:25:28,910 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-11-29T21:25:28,975 INFO  [] o.f.c.i.c.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-11-29T21:25:28,981 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "1 - raw ingest"
+2025-11-29T21:25:28,999 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "2 - core entities"
+2025-11-29T21:25:29,020 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "3 - add vector support"
+2025-11-29T21:25:29,053 INFO  [] o.f.c.i.c.DbMigrate - Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.049s)
+2025-11-29T21:25:29,089 INFO  [] o.j.m.m.a.AiPredictionModuleTests - Started AiPredictionModuleTests in 1.664 seconds (process running for 9.818)
+2025-11-29T21:25:29,104 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-11-29T21:25:29,148 INFO  [] c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d63fc1f
+2025-11-29T21:25:29,149 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-29T21:25:30,181 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:31,185 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:33,186 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:33,188 ERROR [] o.j.m.m.f.i.FdOrgClient - Recover after upstream 5xx 503 for competitions PL
+2025-11-29T21:25:33,196 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:33,197 WARN  [] o.j.m.m.f.i.FdOrgClient - football-data.org client error 400 for competitions PL. Body: {"message":"Your API token is invalid.","errorCode":400}
+2025-11-29T21:25:33,200 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:34,201 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:36,202 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:36,203 ERROR [] o.j.m.m.f.i.FdOrgClient - Recover after IO error while calling football-data.org for competitions PL org.springframework.web.client.ResourceAccessException: I/O error
+	at org.jstats.matchlens_api.modules.football_data_org_gatherer.ingest.FdOrgClient.getCompetitionInfo(FdOrgClient.java:77)
+2025-11-29T21:25:36,208 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:37,208 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:39,210 DEBUG [] o.j.m.m.f.i.FdOrgClient - Calling football-data.org GET /v4/competitions/PL
+2025-11-29T21:25:39,211 WARN  [] o.j.m.m.f.i.FdOrgClient - Recover after rate limit for competitions PL. Retry-After ~5s
+2025-11-29T21:25:39,244 INFO  [] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.jstats.matchlens_api.MatchlensApiApplication for test class org.jstats.matchlens_api.modules.football_data_org_gatherer.ingest.FdRawIngestRepositoryIntegrationTests
+2025-11-29T21:25:39,265 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Starting FdRawIngestRepositoryIntegrationTests using Java 25.0.1 with PID 5477 (started by runner in /home/runner/work/match-lens-api/match-lens-api)
+2025-11-29T21:25:39,265 DEBUG [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-11-29T21:25:39,265 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-29T21:25:39,351 INFO  [] t.pgvector/pgvector:pg16 - Creating container for image: pgvector/pgvector:pg16
+2025-11-29T21:25:39,390 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 is starting: a81e35c4227babee36f5bbb6ea8dc5828c7e20a50c0f3536d9f5355d61429f81
+2025-11-29T21:25:40,484 INFO  [] t.pgvector/pgvector:pg16 - Container pgvector/pgvector:pg16 started in PT1.132699996S
+2025-11-29T21:25:40,484 INFO  [] t.pgvector/pgvector:pg16 - Container is started (JDBC URL: jdbc:postgresql://localhost:32779/test?loggerLevel=OFF)
+2025-11-29T21:25:40,542 INFO  [] o.f.c.FlywayExecutor - Database: jdbc:postgresql://localhost:32779/test?loggerLevel=OFF (PostgreSQL 16.11)
+2025-11-29T21:25:40,552 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-11-29T21:25:40,553 INFO  [] o.f.c.i.c.DbValidate - Successfully validated 3 migrations (execution time 00:00.003s)
+2025-11-29T21:25:40,564 INFO  [] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-11-29T21:25:40,590 INFO  [] o.f.c.i.c.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-11-29T21:25:40,595 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "1 - raw ingest"
+2025-11-29T21:25:40,623 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "2 - core entities"
+2025-11-29T21:25:40,659 INFO  [] o.f.c.i.c.DbMigrate - Migrating schema "public" to version "3 - add vector support"
+2025-11-29T21:25:40,684 INFO  [] o.f.c.i.c.DbMigrate - Successfully applied 3 migrations to schema "public", now at version v3 (execution time 00:00.051s)
+2025-11-29T21:25:40,711 INFO  [] o.j.m.m.f.i.FdRawIngestRepositoryIntegrationTests - Started FdRawIngestRepositoryIntegrationTests in 1.464 seconds (process running for 21.44)
+2025-11-29T21:25:40,720 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Starting...
+2025-11-29T21:25:40,730 INFO  [] c.z.h.p.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@22777bfc
+2025-11-29T21:25:40,730 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-29T21:25:41,284 ERROR [] o.j.m.m.f.i.FdRawIngestService - Failed to serialize competition PL to JSON: boom
+2025-11-29T21:25:41,284 ERROR [] o.j.m.m.f.i.FdRawIngestService - Failed to fetch competition PL from football-data.org: boom
+2025-11-29T21:25:41,308 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-29T21:25:41,312 INFO  [] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-29T21:25:41,523 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-29T21:25:41,526 INFO  [] c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
