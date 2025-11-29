@@ -3,8 +3,10 @@ package org.jstats.matchlens_api;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
+import org.springframework.test.context.DynamicPropertyRegistrar;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.kafka.KafkaContainer;
+import org.testcontainers.ollama.OllamaContainer;
 import org.testcontainers.utility.DockerImageName;
 
 @TestConfiguration(proxyBeanMethods = false)
@@ -19,7 +21,19 @@ class TestcontainersConfiguration {
 	@Bean
 	@ServiceConnection
 	PostgreSQLContainer<?> postgresContainer() {
-		return new PostgreSQLContainer<>(DockerImageName.parse("postgres:latest"));
+		return new PostgreSQLContainer<>(DockerImageName.parse("pgvector/pgvector:pg16"));
+	}
+
+	@Bean
+	OllamaContainer ollamaContainer() {
+		return new OllamaContainer(DockerImageName.parse("ollama/ollama:latest"));
+	}
+
+	@Bean
+	DynamicPropertyRegistrar ollamaProperties(OllamaContainer ollamaContainer) {
+		return registry -> {
+			registry.add("spring.ai.ollama.base-url", ollamaContainer::getEndpoint);
+		};
 	}
 
 }

@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
-
 @Tag(name = "FootballData.org Ingest", description = "Fetch competition info & fixtures.")
 @Validated
 @RestController
@@ -50,7 +48,7 @@ public class IngestFootballDataOrgController {
             @Pattern(regexp = "^[A-Z0-9]{2,5}$", message = "competition must be an uppercase code like PL, CL, etc.")
             String competitionCode) {
 
-        return ingestService.fetchAndStoreCompetitionRaw(competitionCode)
+        return ingestService.storeCompetitionRaw(competitionCode)
                 .orElseThrow(() -> new org.springframework.web.server.ResponseStatusException(
                         org.springframework.http.HttpStatus.NOT_FOUND,
                         "Competition %s not found or already stored".formatted(competitionCode)));
