@@ -31,12 +31,11 @@ resilience4j:
         enableExponentialBackoff: true
         exponentialBackoffMultiplier: 2
     instances:
+      # Only ollamaService uses Resilience4j retry
+      # footballDataApi uses Spring Retry (@Retryable) for backward compatibility
       ollamaService:
         baseConfig: default
         maxAttempts: 2
-      footballDataApi:
-        baseConfig: default
-        maxAttempts: 3
 
   timelimiter:
     configs:

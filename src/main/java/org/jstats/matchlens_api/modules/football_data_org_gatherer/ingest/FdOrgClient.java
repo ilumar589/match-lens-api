@@ -198,7 +198,6 @@ public class FdOrgClient {
      * @param ex the exception that triggered the fallback
      * @return an empty Optional indicating the data is unavailable
      */
-    @SuppressWarnings("unused")
     private Optional<MatchPayload.Competition> getCompetitionInfoFallback(String code, Exception ex) {
         log.warn("Football Data API circuit breaker fallback triggered for competition {}: {}",
                 code, ex.getMessage());

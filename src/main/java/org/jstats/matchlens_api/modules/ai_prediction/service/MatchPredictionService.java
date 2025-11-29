@@ -210,7 +210,6 @@ public class MatchPredictionService {
      * @param ex the exception that triggered the fallback
      * @return a degraded prediction response indicating service unavailability
      */
-    @SuppressWarnings("unused")
     private PredictionResponse predictFallback(PredictionRequest request, Exception ex) {
         log.warn("Prediction service fallback triggered for {} vs {}: {}",
                 request.homeTeam(), request.awayTeam(), ex.getMessage());
