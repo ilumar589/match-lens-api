@@ -198,3 +198,50 @@ Note: Integration tests may take longer due to model loading and inference.
 - Consider using a smaller model
 - Ensure sufficient CPU/RAM for Ollama
 - Check if embeddings are properly indexed
+
+## Circuit Breaker (Resilience4j)
+
+The prediction service is protected by a circuit breaker to handle failures gracefully when the Ollama AI service is unavailable.
+
+### Configuration
+
+Circuit breaker settings are defined in `application-resilience.yml`:
+
+```yaml
+resilience4j:
+  circuitbreaker:
+    instances:
+      ollamaService:
+        slidingWindowSize: 20
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: 30s
+        failureRateThreshold: 60
+```
+
+### Circuit Breaker States
+
+1. **CLOSED**: Normal operation, requests pass through
+2. **OPEN**: After failure threshold is reached, requests are rejected immediately with fallback response
+3. **HALF_OPEN**: After wait duration, allows limited requests to test service recovery
+
+### Fallback Behavior
+
+When the circuit breaker is open or the Ollama service fails, a fallback response is returned:
+
+```json
+{
+  "predictedWinner": "UNAVAILABLE",
+  "confidence": 0.0,
+  "reasoning": "Prediction service temporarily unavailable: <error details>",
+  "keyFactors": ["Service degraded", "Circuit breaker active"],
+  "relevantMatches": []
+}
+```
+
+### Monitoring
+
+Circuit breaker status is available via Spring Boot Actuator:
+
+- `/actuator/health` - Overall health including circuit breaker status
+- `/actuator/circuitbreakers` - Detailed circuit breaker information
+- `/actuator/circuitbreakerevents` - Recent circuit breaker events

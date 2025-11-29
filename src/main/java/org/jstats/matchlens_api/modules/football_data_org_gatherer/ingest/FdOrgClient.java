@@ -1,5 +1,6 @@
 package org.jstats.matchlens_api.modules.football_data_org_gatherer.ingest;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -40,7 +41,11 @@ public class FdOrgClient {
      * - 429/5xx/IO -> retry with exponential backoff
      * - other 4xx -> throw (no retry)
      * - 2xx non-JSON -> treated as upstream error (no retry)
+     * <p>
+     * Protected by a circuit breaker to prevent cascading failures when the
+     * football-data.org API is unavailable.
      */
+    @CircuitBreaker(name = "footballDataApi", fallbackMethod = "getCompetitionInfoFallback")
     @Retryable(
             // Use non-deprecated attributes to be compatible with newer Spring Retry
             retryFor = {
@@ -182,5 +187,21 @@ public class FdOrgClient {
         }
         throw new ResponseStatusException(GATEWAY_TIMEOUT,
                 "Upstream timeout while calling football-data.org");
+    }
+
+    // ---------- Circuit Breaker fallback method ----------
+    /**
+     * Circuit breaker fallback method for getCompetitionInfo.
+     * Called when the football-data.org API circuit breaker is open.
+     *
+     * @param code the competition code that was being requested
+     * @param ex the exception that triggered the fallback
+     * @return an empty Optional indicating the data is unavailable
+     */
+    @SuppressWarnings("unused")
+    private Optional<MatchPayload.Competition> getCompetitionInfoFallback(String code, Exception ex) {
+        log.warn("Football Data API circuit breaker fallback triggered for competition {}: {}",
+                code, ex.getMessage());
+        return Optional.empty();
     }
 }

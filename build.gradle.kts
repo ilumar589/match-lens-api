@@ -30,6 +30,7 @@ repositories {
 
 extra["springGrpcVersion"] = "0.11.0"
 extra["springAiVersion"] = "1.0.0"
+extra["springCloudVersion"] = "2024.0.0"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
@@ -67,6 +68,8 @@ dependencies {
 	implementation("org.springframework.grpc:spring-grpc-server-web-spring-boot-starter")
 	implementation("org.springframework.kafka:spring-kafka")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    // Spring Cloud Circuit Breaker (Resilience4j)
+    implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     // Spring AI dependencies
     implementation("org.springframework.ai:spring-ai-starter-model-ollama")
     implementation("org.springframework.ai:spring-ai-starter-vector-store-pgvector")
@@ -92,6 +95,7 @@ dependencyManagement {
 	imports {
 		mavenBom("org.springframework.grpc:spring-grpc-dependencies:${property("springGrpcVersion")}")
 		mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
 	}
 }
 

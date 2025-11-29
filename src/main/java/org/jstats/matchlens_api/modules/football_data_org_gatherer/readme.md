@@ -53,3 +53,39 @@ http://localhost:8080/v3/api-docs
 
 OpenAPI YAML:
 http://localhost:8080/v3/api-docs.yaml
+
+Circuit Breaker (Resilience4j)
+------------------------------
+
+The Football-Data.org API client is protected by a circuit breaker to handle failures gracefully when the external API is unavailable.
+
+### Configuration
+
+Circuit breaker settings are defined in `application-resilience.yml`:
+
+```yaml
+resilience4j:
+  circuitbreaker:
+    instances:
+      footballDataApi:
+        waitDurationInOpenState: 60s
+        failureRateThreshold: 50
+```
+
+### Circuit Breaker States
+
+1. **CLOSED**: Normal operation, requests pass through
+2. **OPEN**: After failure threshold is reached, requests return empty results immediately
+3. **HALF_OPEN**: After wait duration, allows limited requests to test service recovery
+
+### Fallback Behavior
+
+When the circuit breaker is open or the Football-Data.org API fails, the fallback returns `Optional.empty()` for competition info requests. This allows the application to continue operating in a degraded mode.
+
+### Monitoring
+
+Circuit breaker status is available via Spring Boot Actuator:
+
+- `/actuator/health` - Overall health including circuit breaker status
+- `/actuator/circuitbreakers` - Detailed circuit breaker information
+- `/actuator/circuitbreakerevents` - Recent circuit breaker events
