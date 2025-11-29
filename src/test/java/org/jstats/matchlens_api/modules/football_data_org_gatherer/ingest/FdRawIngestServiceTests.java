@@ -42,7 +42,7 @@ class FdRawIngestServiceTests {
     void whenRecentlyFetched_serviceSkipsAndReturnsEmpty() {
         when(repo.wasFetchedSince(eq(SRC), eq(EP), eq("PL"), any(OffsetDateTime.class))).thenReturn(true);
 
-        var result = service.fetchAndStoreCompetitionRaw("PL");
+        var result = service.storeCompetitionRaw("PL");
         assertTrue(result.isEmpty());
 
         verifyNoInteractions(client);
@@ -62,7 +62,7 @@ class FdRawIngestServiceTests {
         when(repo.insertRaw(eq(SRC), eq(EP), eq("PL"), any(OffsetDateTime.class), eq("{\"id\":2021}")))
                 .thenReturn(Optional.of(123L));
 
-        var result = service.fetchAndStoreCompetitionRaw("PL");
+        var result = service.storeCompetitionRaw("PL");
         assertEquals(Optional.of(123L), result);
 
         // Verify the timestamp passed equals now(clock) in UTC
@@ -78,7 +78,7 @@ class FdRawIngestServiceTests {
         when(repo.wasFetchedSince(eq(SRC), eq(EP), eq("PL"), any(OffsetDateTime.class))).thenReturn(false);
         when(client.getCompetitionInfo("PL")).thenReturn(Optional.empty());
 
-        var result = service.fetchAndStoreCompetitionRaw("PL");
+        var result = service.storeCompetitionRaw("PL");
         assertTrue(result.isEmpty());
 
         verify(repo, never()).insertRaw(anyString(), anyString(), anyString(), any(), anyString());
@@ -92,7 +92,7 @@ class FdRawIngestServiceTests {
         when(mapper.writeValueAsString(dto)).thenThrow(new JsonProcessingException("boom") {});
 
         var ex = assertThrows(FdOrgClient.UpstreamJsonParseException.class,
-                () -> service.fetchAndStoreCompetitionRaw("PL"));
+                () -> service.storeCompetitionRaw("PL"));
         assertTrue(ex.getMessage().contains("boom"));
 
         verify(repo, never()).insertRaw(anyString(), anyString(), anyString(), any(), anyString());

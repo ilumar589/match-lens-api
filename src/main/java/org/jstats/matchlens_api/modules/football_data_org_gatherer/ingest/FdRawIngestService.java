@@ -38,11 +38,10 @@ public class FdRawIngestService {
         this.clock = clock;
     }
 
-    public Optional<Long> fetchAndStoreCompetitionRaw(String code) {
-
+    public Optional<Long> storeCompetitionRaw(String code) {
         try {
-            var nowUtc = OffsetDateTime.now(clock).withOffsetSameInstant(ZoneOffset.UTC);
-            var monthAgo = nowUtc.minusMonths(1);
+            final var nowUtc = OffsetDateTime.now(clock).withOffsetSameInstant(ZoneOffset.UTC);
+            final var monthAgo = nowUtc.minusMonths(1);
 
             // Guard: if we fetched this key in the last month, skip remote call
             if (fdRawIngestRepository.wasFetchedSince(SRC, EP, code, monthAgo)) {

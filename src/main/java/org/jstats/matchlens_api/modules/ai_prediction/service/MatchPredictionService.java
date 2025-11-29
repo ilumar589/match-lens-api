@@ -109,7 +109,14 @@ public class MatchPredictionService {
                     .query(query)
                     .topK(promptConfig.getMaxContextMatches())
                     .build();
-            return vectorStore.similaritySearch(searchRequest);
+
+            final var result = vectorStore.similaritySearch(searchRequest);
+
+            if (result == null)
+                return List.of();
+
+            return result;
+
         } catch (Exception e) {
             log.warn("Vector store search failed: {}", e.getMessage());
             return List.of();

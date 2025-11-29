@@ -86,7 +86,7 @@ class AiPredictionModuleTests {
                 new org.springframework.jdbc.core.namedparam.MapSqlParameterSource(),
                 Boolean.class
         );
-        assertTrue(Boolean.TRUE.equals(extensionExists), "pgvector extension should be enabled");
+        assertEquals(Boolean.TRUE, extensionExists, "pgvector extension should be enabled");
     }
 
     @Test
@@ -101,7 +101,7 @@ class AiPredictionModuleTests {
                 new org.springframework.jdbc.core.namedparam.MapSqlParameterSource(),
                 Boolean.class
         );
-        assertTrue(Boolean.TRUE.equals(tableExists), "match_embedding table should exist");
+        assertEquals(Boolean.TRUE, tableExists, "match_embedding table should exist");
     }
 
     @Test
