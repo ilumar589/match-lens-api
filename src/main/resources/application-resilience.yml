@@ -1,0 +1,58 @@
+# Resilience4j Circuit Breaker Configuration
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+    instances:
+      ollamaService:
+        baseConfig: default
+        slidingWindowSize: 20
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: 30s
+        failureRateThreshold: 60
+      footballDataApi:
+        baseConfig: default
+        waitDurationInOpenState: 60s
+        failureRateThreshold: 50
+
+  retry:
+    configs:
+      default:
+        maxAttempts: 3
+        waitDuration: 1s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+    instances:
+      # Only ollamaService uses Resilience4j retry
+      # footballDataApi uses Spring Retry (@Retryable) for backward compatibility
+      ollamaService:
+        baseConfig: default
+        maxAttempts: 2
+
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 5s
+    instances:
+      ollamaService:
+        timeoutDuration: 30s
+      footballDataApi:
+        timeoutDuration: 10s
+
+# Actuator Configuration for Circuit Breaker Health Endpoints
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,circuitbreakers,circuitbreakerevents

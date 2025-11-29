@@ -2,6 +2,8 @@ package org.jstats.matchlens_api.modules.ai_prediction.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.jstats.matchlens_api.modules.ai_prediction.config.PromptConfig;
 import org.jstats.matchlens_api.modules.ai_prediction.model.MatchContext;
 import org.jstats.matchlens_api.modules.ai_prediction.model.PredictionRequest;
@@ -15,7 +17,6 @@ import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -60,10 +61,16 @@ public class MatchPredictionService {
 
     /**
      * Predicts the outcome of a match using RAG-based AI.
+     * <p>
+     * This method is protected by a circuit breaker to handle failures in the
+     * Ollama AI service gracefully. When the circuit is open, the fallback
+     * method will return a degraded response.
      *
      * @param request the prediction request containing match details
      * @return the prediction response with winner, confidence, and reasoning
      */
+    @CircuitBreaker(name = "ollamaService", fallbackMethod = "predictFallback")
+    @Retry(name = "ollamaService")
     public PredictionResponse predict(PredictionRequest request) {
         log.info("Predicting match: {} vs {} in {} on {}",
                 request.homeTeam(), request.awayTeam(),
@@ -192,6 +199,27 @@ public class MatchPredictionService {
                 "Unable to generate prediction due to LLM error. Based on limited historical data.",
                 List.of("Fallback prediction", "Insufficient data"),
                 context.relevantMatches()
+        );
+    }
+
+    /**
+     * Circuit breaker fallback method for the predict method.
+     * Called when the Ollama AI service is unavailable or the circuit breaker is open.
+     *
+     * @param request the original prediction request
+     * @param ex the exception that triggered the fallback
+     * @return a degraded prediction response indicating service unavailability
+     */
+    private PredictionResponse predictFallback(PredictionRequest request, Exception ex) {
+        log.warn("Prediction service fallback triggered for {} vs {}: {}",
+                request.homeTeam(), request.awayTeam(), ex.getMessage());
+
+        return new PredictionResponse(
+                "UNAVAILABLE",
+                0.0,
+                "Prediction service temporarily unavailable: " + ex.getMessage(),
+                List.of("Service degraded", "Circuit breaker active"),
+                List.of()
         );
     }
 }

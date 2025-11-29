@@ -53,3 +53,46 @@ http://localhost:8080/v3/api-docs
 
 OpenAPI YAML:
 http://localhost:8080/v3/api-docs.yaml
+
+Circuit Breaker and Retry (Resilience4j + Spring Retry)
+-------------------------------------------------------
+
+The Football-Data.org API client uses a combination of Spring Retry and Resilience4j circuit breaker for resilience:
+
+- **Spring Retry (@Retryable)**: Handles retries with exponential backoff (up to 3 attempts)
+- **Resilience4j Circuit Breaker**: Protects against cascading failures when the API is unavailable
+
+### Configuration
+
+Circuit breaker settings are defined in `application-resilience.yml`:
+
+```yaml
+resilience4j:
+  circuitbreaker:
+    instances:
+      footballDataApi:
+        waitDurationInOpenState: 60s
+        failureRateThreshold: 50
+```
+
+Spring Retry is configured via @Retryable annotation with:
+- 3 max attempts
+- Exponential backoff: 1s initial delay, multiplier 2.0, max 8s
+
+### Circuit Breaker States
+
+1. **CLOSED**: Normal operation, requests pass through
+2. **OPEN**: After failure threshold is reached, requests return empty results immediately
+3. **HALF_OPEN**: After wait duration, allows limited requests to test service recovery
+
+### Fallback Behavior
+
+When the circuit breaker is open or the Football-Data.org API fails, the fallback returns `Optional.empty()` for competition info requests. This allows the application to continue operating in a degraded mode.
+
+### Monitoring
+
+Circuit breaker status is available via Spring Boot Actuator:
+
+- `/actuator/health` - Overall health including circuit breaker status
+- `/actuator/circuitbreakers` - Detailed circuit breaker information
+- `/actuator/circuitbreakerevents` - Recent circuit breaker events
